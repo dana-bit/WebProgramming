@@ -1,0 +1,20 @@
+.heading{
+	border:5px solid grey;
+	position:relative;
+	margin-right: 55px;
+	font-family:Verdana, sans-serif;
+	background:url('report.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+html{
+	background-color: #85ffef;
+
+}
+body{
+	margin:auto;
+	background-color: lightblue;
+	padding-left:60px;
+	width: 70%;
+	border: 9px solid #edbedd;
+}

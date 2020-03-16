@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<title>REPORT CARD</title>
+		<link rel="stylesheet" type="text/css" href="report.css">
+		<style>
+			table{
+				border-collapse:collapse;
+				width:80%;
+			}
+			table,th,td {
+			font-family:times new roman, serif;
+			border:1px solid black;
+			margin:20px;
+			padding:15px;
+			}
+			th{
+				height:45px;
+				background-color: #8ca3a3;
+				border: 3px solid black;
+			}
+			.tables{
+				margin:20% 20% 0% 9%;
+				text-align: left;
+			}
+			.grade{
+				margin:0% 11% 9% 20%;
+			}
+			td:nth-child(odd) {
+		  background-color: #f0efef;
+			}
+			button{
+				background-color: #89adb8;
+				width: 20%;
+				height: 5%
+				margin:20% 20% 0% 9%;
+			}
+		</style>
+		<script src="reportcard.js"></script>
+</head>
+<body>
+	<div class="heading">
+		<center><h2><em>REPORT CARD</em><br></h2>
+		<h1>CP ELLINGHAM HIGH SCHOOL</h1>
+		<strong>760 Cooper Street,<br>
+		Agawan,MA 00101,<br>
+	Phone: (555)999-0001, Email:info@cpe.edu.ag</strong></center>
+</div>
+<form id="cancel">
+<ul style="float:left;width:20%;">
+	<br><br><label> Date: </label><br>
+	<input id="date" name="time" type="date"/><br>
+	<label>Parent Name</label><br>
+	<input id="pname" name="Pname" type="text" size= "15"/><br>
+	<label>Parent's email</label><br>
+	<input id="pename" name="pename" type="text" size= "15"/><br>
+	<label>Grade/Room</label><br>
+	<input id="grade" name="room" type="text" size="15"/><br>
+	<label>School days </label><br>
+	<input id="days" name="school" type="number"/><br>
+	<label>Days Absent</label><br>
+	<input  id="absent" name="dabsent" type="number" />
+</ul>
+<ul  style="float:right; width:25%;">
+	<br><br><label>Student's Name</label><br>
+	<input id="stuname" name="student" type="text" size="15"/><br>
+	<label>ID #</label><br>
+	<input id="num" name="id" type="number"/><br>
+	<label>Parent's Tele #</label><br>
+	<input id="tele" name="tel" type="number"/><br>
+	<label>Semester/Year</label><br>
+	<input id="sem" name="year" type="text" size="15"/><br>
+	<label>Days Present</label><br>
+	<input id="pres" name="present" type="number"/><br>
+	<label> Advisor</label><br>
+	<select>
+		<option></option>
+		  <option>Mr. Karl Whyte</option>
+		  <option>Ms. Marcia Francis</option>
+		  <option>Mrs. Carlene Smith</option>
+		  <option>Mr. Owen Jones</option>
+</select>
+</ul>
+<table class="tables">
+	<tr>
+		<th>Subject</th>
+		<th>Test1 %</th>
+		<th>Test2 %</th>
+		<th>Finals %</th>
+		<th>LetterGrade</th>
+	</tr>
+	<tr>
+		<td>Math</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>English</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>Science</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>History</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>Economics</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>Literature</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>Music</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()" /></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled/></td>
+	</tr>
+	<tr>
+		<td>PE</td>
+		<td><input name="first" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="second" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="final" type="text" size="15" onchange="Grading()"/></td>
+		<td><input name="letter" type="text" size="15" disabled /></td>
+	</tr>
+</table>
+<p>
+	<strong><label class="Note">Notes:<br />
+		<textarea name = "Notes"
+		rows = "5" cols = "40" style="border:groove 6px aqua;"></textarea>
+	</label></strong>
+</p>
+<table class="grade" style="float: right;">
+  <tr>
+	<th colspan="3">GRADING SCALE</th>
+  </tr>
+  <tr>
+	<td>A=90%-100%</td>
+	<td>B+=80%-89%</td>
+	<td>B=70%-79%</td>
+  </tr>
+  <tr>
+	<td>C+=60%-69%</td>
+	<td>C=50%-59%</td>
+	<td>D=0%-49%</td>
+  </tr>
+</table>
+</form>
+<button type="reset" onclick="Cancel()">Cancel</button>
+	<button type="Save" onclick="Save()">Save</button>
+		<button type="Email" onclick="Email()"><a id="emailit">Email</a></button>
+			<button type="Exit" onclick="Exit()">Exit</button>

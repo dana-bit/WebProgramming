@@ -1,0 +1,64 @@
+html>
+	<head>
+		<title>TEACHER LOGIN PAGE</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript">
+			var attempt = 3; // Variable to count number of attempts.
+			// Below function Executes on click of login button.
+				function info(){
+					var username = document.getElementById("username").value;
+					var password = document.getElementById("password").value;
+					if ( username == "Teacher" && password == "TEACHER"){
+						alert ("Login successfully");
+						window.location = "reportcard.html"; // Redirecting to other page.
+						return false;
+					}
+						else { 
+						attempt --;// Decrementing by one.
+						alert("You have left "+attempt+" attempt;");
+						if( attempt == 0){
+							document.getElementById("username").disabled = true;
+							document.getElementById("password").disabled = true;
+							document.getElementById("submit").disabled = true;
+							return false;
+						}
+					}
+				}
+</script>
+<style >
+	ul.list{
+	list-style-type: none;
+	text-align: center;
+}
+
+ul.list li{
+		width: 250px;
+		margin-bottom: 15px;
+}
+
+ul.list li input{
+	width:250px;
+	text-align: center;
+	padding:8px 0px;
+	border:none;
+	background-color: #b3d3d3;
+	border-radius: 5px;
+}
+
+ul.list li input[type="button"]{
+	background-color: #fcb1da;
+	color: black;
+}
+
+</style>
+</head>
+<body>
+	<div class="form-container">
+		<ul class="list">
+			<li><h2>TEACHER LOGIN</h2></li>
+			<li><input id="username" type="text" name="Username" placeholder="Username"></li>
+			<li><input id="password" type="password" name="Password" placeholder="Password"></li>
+			<li><input id="submit" type="button" name="Submit" value="Submit" onclick="info()"></li>
+		</ul>
+
+</div>
